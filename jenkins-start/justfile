@@ -1,0 +1,7 @@
+default: up
+
+up:
+  docker compose up
+
+up-full:
+  docker compose --profile full up
