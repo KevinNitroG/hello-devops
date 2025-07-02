@@ -1,2 +1,22 @@
 pipeline {
+    agent any
+
+    environment {
+        GITHUB_TOKEN = credentials('github-token')
+    }
+
+    stages {
+        stage('hehe') {
+            steps {
+                echo 'test'
+                println 'idk does this work'
+            }
+        }
+
+        stage('huhu') {
+            steps {
+                sh 'git status'
+            }
+        }
+    }
 }
